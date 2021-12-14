@@ -1,17 +1,11 @@
 const mysql=require('mysql');
 
-const conn=mysql.createConnection({
+const conn=mysql.createPool({
     host: process.env.host,
     user: process.env.user,
     password: process.env.password,
-    database: process.env.database
+    database: process.env.database,
+    connectionLimit: 10
 })
 
-// connect to database
-conn.connect((err) =>
-{
-    if(err) throw err;
-    console.log("MySQL is connected...")
-})
-
-exports.connection=() => conn;
+module.exports=conn;

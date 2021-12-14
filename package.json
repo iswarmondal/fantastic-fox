@@ -4,6 +4,7 @@
   "description": "As we all know foxes are fantastic",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon *.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
