@@ -19,7 +19,7 @@ app.get('/',(req,res) =>
 });
 
 // Rider privet routes
-app.use("/api/rider",riderPrivetRoute);
+app.use("/rider",riderPrivetRoute);
 
 // Rider public routes
 app.use("/api",riderPublicRoute)

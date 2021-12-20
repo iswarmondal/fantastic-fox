@@ -1,13 +1,12 @@
 const router=require('express').Router();
+const auth=require('./auth')
 
-router.get("/login",(req,res) =>
+router.put('/update-location',auth,(req,res) =>
 {
-    res.send({message: 'Hello WWW!'});
-})
-
-router.get("/register",(req,res) =>
-{
-    res.send("Holla! You can also become a hero")
+    const data={
+        location: req.currentLocation
+    }
+    res.send(res.user)
 })
 
 module.exports=router
