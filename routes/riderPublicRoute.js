@@ -6,6 +6,7 @@ require('dotenv').config();
 // import the database
 const conn=require('../database');
 
+// get all riders
 router.get("/riders",(req,res) =>
 {
 
@@ -17,6 +18,7 @@ router.get("/riders",(req,res) =>
     })
 })
 
+// new rider registration
 router.post('/new-rider',async (req,res) =>
 {
     // GENERATE A HASH OF THE PASSWORD
@@ -51,6 +53,7 @@ router.post('/new-rider',async (req,res) =>
 
 })
 
+// rider login
 router.post('/rider-login',async (req,res) =>
 {
     const data={
